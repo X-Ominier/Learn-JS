@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="fname" />
+    <button type="submit" onclick="MyFunction()">submit</button>
+    <p id="demo"></p>
+    <script>
+      function MyFunction() {
+        let input_text = document.getElementById("fname").value;
+        let demo_text;
+        if (isNaN(input_text) || input_text < 1 || input_text > 10) {
+          demo_text = "Iput is not valid";
+          document.getElementById("demo").innerHTML = demo_text;
+          document.getElementById("demo").style.color = "red";
+        } else {
+          demo_text = "input s valid";
+          document.getElementById("demo").innerHTML = demo_text;
+          document.getElementById("demo").style.color = "green";
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

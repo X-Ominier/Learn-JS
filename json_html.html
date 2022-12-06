@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // =================== making static json
+      let person = {
+        name: "iman",
+        family: "madaeni",
+        age: 30,
+      };
+      console.log(person);
+
+      // ==================== add
+      person.car = "pride";
+      console.log(person);
+
+      // =================== making json using constructor
+      function Person(name, family, age) {
+        this.name = name;
+        this.family = family;
+        this.age = age;
+        this.fullname = function () {
+          return this.name + " " + this.family;
+        };
+      }
+
+      var axio = new Person("amirreza", "golbahar", 17);
+      console.log(axio);
+      console.log(axio.fullname());
+    </script>
+  </body>
+</html>
